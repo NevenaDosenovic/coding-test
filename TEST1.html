@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Act+Acre</title>
+<a href="https://www.flaticon.com/free-icons/user" title="user icons"></a>
+<a href="https://www.flaticon.com/free-icons/search" title="search icons"></a>
+
+<style>
+
+*{
+margin: 0;
+padding: 0;
+}
+
+body{
+background-color: white;
+font-weight: normal;
+font-family: tahoma;
+color: #333;
+}
+
+
+.wrapper{
+width: 50%;
+margin: 0 auto;
+padding: 0;
+}
+
+h1{
+display: inline-block;
+background-color: white;
+color: black;
+font-size: 15px;
+font-weight: normal;
+text-transform: uppercase;
+padding: 4px 20px;
+float: left;
+}
+
+.clear{
+clear: both;
+}
+
+.items{
+display: block;
+margin: 20px 0;
+}
+
+.item{
+background-color: white;
+float: left;
+margin: 0 10px 10px 0;
+width: 205px;
+padding: 10px;
+}
+
+.item img{
+display: block;
+margin: auto;
+}
+
+h2{
+font-size: 12p;
+display: block;
+border: 1p solid #ccc;
+margin: 0 0 10px 0;
+padding: 0 0 5px 0;
+}
+
+button{
+padding: 5px 40px;
+background-color: #b89d8f;
+color: #525453;
+font-size: 10px;
+text-transform: uppercase;
+flex: right;
+margin: 20px 0;
+cursor: pointer;
+font-family: tahoma;
+border: none;
+}
+
+button:hover{
+  background-color: pink;
+}
+
+
+button:focus{
+outline: none !important;
+}
+
+
+span{
+float: right;
+}
+
+
+p{
+font-size: 14px;
+}
+
+.topnav {
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  width: 100%;
+  margin-left: 0;
+  justify-content: space-between;
+}
+
+
+
+.topnav a {
+  display: block;
+  text-align: center;
+  color: black;
+  padding: 14px 21px;
+  text-decoration: none;
+  font-size: 15px;
+}
+@media (max-width: 920px){
+  .topnav a{
+    width: 400px;
+  }
+}
+
+
+.shopping-cart{
+display: inline-block;
+background: url(shopping-bag.png) no-repeat 0 0;
+width: 23px;
+height: 23px;
+margin: 50% 10% 0 0;
+}
+
+.loupe{
+display: inline-block;
+background: url(loupe.png) no-repeat 0 0;
+width: 23px;
+height: 23px;
+margin: 50% 0 0 -40%;
+}
+
+.user{
+display: inline-block;
+background: url(user.png) no-repeat 0 0;
+width: 23px;
+height: 23px;
+margin: 50% 0 0 -20%;
+}
+
+nav-logo{
+  float: right;
+  margin-right: -60%;
+  margin-top: 5px;
+}
+
+nav{
+  float: right;
+  margin-right: 31%;
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li{
+  display:  inline-block;
+  margin-left: 5px;
+  padding-top: 5px;
+}
+
+nav a{
+  color: black;
+  font-size: 5px;
+}
+
+.logo{
+  margin: 5px;
+  margin-left: 10px;
+  float: left;
+  height: 55px;
+}
+
+.content{
+  text-align: left;
+  background-color: #f2f5f3;
+  text-indent: 50px;
+  margin-right: auto;
+  margin-left: 0;
+  height: 100%;
+}
+@media (max-width: 629px){
+  .content{
+    width: 500px;
+  }
+}
+
+.image{
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width:629px) {
+  img#optionalstuff {
+    display: none;
+  }
+}
+
+.h2-class-new{
+  font-weight: normal;
+  text-align: center;
+  font-size: 200%;
+  width: 120%;
+  float: left;
+}
+
+.h2-class{
+  font-weight: normal;
+  font-size: 35px;
+}
+
+.h3-class{
+  font-weight: normal;
+  font-size: 14px;
+  margin-right:190px;
+}
+
+.letters{
+  color: #d2d6d4;
+  display: inline-block;
+  float: left;
+  margin-left: -3%;
+  margin-top: 20px;
+}
+
+.letters-second{
+  display: inline-block;
+  float: left;
+  margin-left: -8%;
+  margin-top: 20px;
+}
+
+.align-class{
+  align-items: center;
+}
+@media (max-width: 642px){
+  .align-class{
+    width: 10%;
+    height: 10%;
+  }
+}
+
+.featured-icons-texts {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 15px 10px;
+    height: 10%;
+    width: 80%;
+}
+.featured-icons-texts .featured-icon-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    margin-right: 30px;
+    margin-left: 50px;
+}
+@media (max-width: 500px){
+  .featured-icons-texts.featured-icon-text{
+    width: 10%;
+    height: 10%;
+  }
+}
+
+.essentials_pdp.qty-cta {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.essentials_pdp .qty-cta .input-group {
+    width: 30%;
+    display: flex;
+    border: 2px solid #222;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin-left: 15px;
+}
+.essentials_pdp .input-group input[type="button"] {
+    cursor: pointer;
+}
+.glavna{
+    display: grid;
+    grid-template-columns: 60% auto;
+    grid-template-rows: auto;
+    grid-gap: 5px 0;
+    width: 100%;
+    margin-left: 0;
+    background-color: white;
+}
+
+
+.second-part{
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+}
+
+.accordion {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 50%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 13px;
+  transition: 0.4s;
+  margin-left: 50px;
+  padding: 5px;
+}
+@media (max-width: 629px){
+  .accordion{
+    width: 100%;
+  }
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+div {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+.fRZCec {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.bQdzsy {
+    transform: translateX(0px);
+    display: flex;
+    flex-direction: row;
+    transition: all 0.35s ease-in-out 0s;
+}
+.cdNvVx.right {
+    right: 0px;
+}
+.cdNvVx {
+    position: absolute;
+    padding-top: 6px;
+    text-align: center;
+    box-sizing: border-box;
+    height: 56px;
+    width: 59px;
+    background-color: rgb(255, 255, 255);
+    top: 50%;
+    cursor: pointer;
+    margin-right: 180px;
+    margin-left: 180px;
+    border: none;
+}
+.cdNvVx.left {
+    left: 0px;
+}
+.fRZCec * {
+    box-sizing: border-box;
+}
+svg:not(:root) {
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+.container{
+  transition: 0.5s;
+}
+
+ 
+.row{
+  display: flex;
+}
+
+
+ body-new {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebe8ff;
+}
+
+.cart-button {
+  position: relative;
+  background-color: #b89d8f;
+  cursor: pointer;
+  color: #525453;
+  transition: .3s ease-in-out;
+  font-size: 10px;
+  text-transform: uppercase;
+  border: none;
+  width: 200px;
+  height: 27px;
+  overflow: hidden;
+}
+.quantity-field{
+  position: relative;
+  width: 60px;
+  height: 25px;
+  border-radius: 0;
+  border-width: 1px;
+  text-align: center;
+  overflow: hidden;
+}
+.cart-button:hover {
+  background-color: pink;
+}
+.cart-button:active {
+  transform: scale(.9);
+}
+
+.cart-button .fa-shopping-cart {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: -10%;
+  font-size: 2em;
+  transform: translate(-50%,-50%);
+}
+.cart-button .fa-box {
+  position: absolute;
+  z-index: 3;
+  top: -20%;
+  left: 52%;
+  font-size: 1.2em;
+  transform: translate(-50%,-50%);
+}
+.cart-button span {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  font-size: 1.2em;
+  color: #fff;
+  transform: translate(-50%,-50%);
+}
+.cart-button span.add-to-cart {
+  opacity: 1;
+}
+.cart-button span.added {
+  opacity: 0;
+}
+
+.cart-button.clicked .fa-shopping-cart {
+  animation: cart 1.5s ease-in-out forwards;
+}
+.cart-button.clicked .fa-box {
+  animation: box 1.5s ease-in-out forwards;
+}
+.cart-button.clicked span.add-to-cart {
+  animation: txt1 1.5s ease-in-out forwards;
+}
+.cart-button.clicked span.added {
+  animation: txt2 1.5s ease-in-out forwards;
+}
+@keyframes cart {
+  0% {
+    left: -10%;
+  }
+  40%, 60% {
+    left: 50%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+@keyframes box {
+  0%, 40% {
+    top: -20%;
+  }
+  60% {
+    top: 40%;
+    left: 52%;
+  }
+  100% {
+    top: 40%;
+    left: 112%;
+  }
+}
+@keyframes txt1 {
+  0% {
+    opacity: 1;
+  }
+  20%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes txt2 {
+  0%, 80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.sr-only{
+  width: 500px;
+  height: 100px;
+}
+
+
+</style>
+
+<div class="topnav">
+
+<img src="logo.png" class="logo">
+   <nav>
+  <ul>
+    <li><a href="#shop">Shop</a></li>
+    <li><a href="#science">Science</a></li>
+    <li><a href="#press">Press</a></li>
+    <li><a href="#blogs">Blogs</a></li>
+    <li><a href="#tutorial">Tutorial</a></li>
+  </ul>
+</nav>
+<nav-logo>
+<span class="container"><i class="shopping-cart"></i></span>
+<span class="container quantity">0</span>
+<span><i class="user"></i></span>
+<span><i class="loupe"></i></span>
+</nav-logo>
+</div>
+</head>
+
+<body>
+  <div class="glavna">
+  <img id="optionalstuff" src="image.png" class="image" alt="" height="650" max-width:100%>
+  <div class="content">
+    <p class="letters">&#8592; ALL PRODUCTS/HAIRCARE/</p><p class="letters-second">RESTORATIVE HAIR MASK</p>
+    <br><br><br><br><br><br>
+    <h2 class="h2-class">RESTORATIVE HAIR MASK</h2>
+    <h3 class="h3-class">NUTURISHMENT IN A BOTTLE</h3>
+    <br>
+    <hr style="width:75%;text-align:center;margin-right:17%;float:right;">
+    <br>
+    <p style="text-align: left;font-size: small;margin-right:100px;margin-left: 50px;text-indent: 0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor commodo ullamcorper a lacus vestibulum. Lactus accumsan tortar pasuere ac ut.</p>
+    <br>
+    <div class="featured-icons-texts">
+      <div class="featured-icon-text">           
+    <img class="content align-class" src="https://cdn.shopify.com/s/files/1/0054/3978/3001/files/Silicone_Free.png?v=1639422873" alt="" width="35px">
+    <span style="font-size: 10px;text-transform: uppercase;margin-right: 30px;">Silicone free</span>
+    <img class="content align-class" src="https://cdn.shopify.com/s/files/1/0054/3978/3001/files/Silicone_Free.png?v=1639422873" alt="" width="35px">
+    <span style="font-size: 10px;text-transform: uppercase;margin-right: 30px;">Silicone free</span>
+  </div>
+</div>
+<div class="featured-icons-texts">
+      <div class="featured-icon-text"> 
+    <img class="content align-class" src="https://cdn.shopify.com/s/files/1/0054/3978/3001/files/Silicone_Free.png?v=1639422873" alt="" width="35px">
+    <span style="font-size: 10px;text-transform: uppercase;margin-right: 30px;">Silicone free</span>
+    <img class="content align-class" src="https://cdn.shopify.com/s/files/1/0054/3978/3001/files/Silicone_Free.png?v=1639422873" alt="" width="35px">
+    <span style="font-size: 10px;text-transform: uppercase;margin-right: 30px;">Silicone free</span>
+  </div>
+  </div>
+    <hr style="width:75%;text-align:center;margin-right:17%;float:right">
+    <br>
+
+    <label class="radio" style="margin-left:50px;">
+      <input type="radio" name="foobar" checked>  Buy Once | $38</label>
+      <br><br>
+      <label class="radio" style="margin-left:50px;color:grey;">
+        <input type="radio" name="foobar">  Subscribe (SAVE 20%) | $30
+      </label>
+
+<br><br><br>
+
+
+ <div class="qty-cta">
+    <div class="input-group row">
+        <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
+    
+    <button class="cart-button">
+  <span class="add-to-cart">Add to cart</span>
+  <span class="added">Added</span>
+  <i class="fas fa-shopping-cart"></i>
+  <i class="fas fa-box"></i>
+</button>
+<script>
+  const cartButtons = document.querySelectorAll('.cart-button');
+
+cartButtons.forEach(button => {
+  button.addEventListener('click', cartClick);
+});
+
+function cartClick() {
+  let button = this;
+  button.classList.add('clicked');
+}
+</script>
+  <!--  <button id="add-to-cart" class="g-add-to-cart-btn btn product__add addtocart one-time-add prd_ad_cart  hide " data-cart-add="40165394677859" data-cart-quantity="1" data-cart-selling-plan="595394659">ADD TO CART<span class="add_spce"></span>
+    </button>
+  -->
+    </div>
+  </div> 
+</div>
+</div>
+<br><br>
+
+
+<button class="accordion">Ingredients</button>
+<div class="panel">
+  <p style="width: 50%;margin-left: 40px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<hr style="width:50%;text-align:center;margin-left: 50px;">
+
+<button class="accordion">Ingredients</button>
+<div class="panel">
+  <p style="width: 50%;margin-left: 40px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<hr style="width:50%;text-align:center;margin-left: 50px;">
+<button class="accordion">Ingredients</button>
+<div class="panel">
+  <p style="width: 50%;margin-left: 40px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+<br><br><br>
+
+<div class="container-new">
+        <header-new>
+            <div class="shopping">
+            </div>
+        </header-new>
+
+        <div class="list">
+          
+        </div>
+    </div>
+    <div class="card">
+        <ul class="listCard">
+        </ul>
+        <div class="checkOut">
+            <div class="total"></div>
+            <div class="closeShopping"></div>
+        </div>
+    </div>
+
+
+<!--
+  Button adds one item to cart.
+ <script>
+let openShopping = document.querySelector('.shopping');
+let closeShopping = document.querySelector('.closeShopping');
+let list = document.querySelector('.list');
+let listCard = document.querySelector('.listCard');
+let body = document.querySelector('body-new');
+let total = document.querySelector('.total');
+let quantity = document.querySelector('.quantity');
+
+openShopping.addEventListener('click', ()=>{
+    body.classList.add('active');
+})
+closeShopping.addEventListener('click', ()=>{
+    body.classList.remove('active');
+})
+
+let products = [
+    {
+        id: 1,
+        name: 'PRODUCT NAME 1',
+        image: 'two.jpg',
+        price: 120000
+    },
+];
+let listCards  = [];
+function initApp(){
+    products.forEach((value, key) =>{
+        let newDiv = document.createElement('div');
+        newDiv.classList.add('item');
+        newDiv.innerHTML = `<button onclick="addToCard(${key})">Add To Cart</button>`;
+        list.appendChild(newDiv);
+    })
+}
+initApp();
+function addToCard(key){
+    if(listCards[key] == null){
+        // copy product form list to list card
+        listCards[key] = JSON.parse(JSON.stringify(products[key]));
+        listCards[key].quantity = 1;
+    }
+    reloadCard();
+}
+function reloadCard(){
+    listCard.innerHTML = '';
+    let count = 0;
+    let totalPrice = 0;
+    listCards.forEach((value, key)=>{
+        totalPrice = totalPrice + value.price;
+        count = count + value.quantity;
+        
+    })
+    quantity.innerText = count;
+}
+function changeQuantity(key, quantity){
+    if(quantity == 0){
+        delete listCards[key];
+    }else{
+        listCards[key].quantity = quantity;
+        listCards[key].price = quantity * products[key].price;
+    }
+    reloadCard();
+}
+ </script> 
+-->  
+
+<br><br>
+<div class="container-carousel" style="width: 70%;">
+  <h2 class="h2-class-new">YOU MAY ALSO LIKE</h2>  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <div class="carousel-inner" style="margin-left: 30%;">
+      <div class="item active">
+        <img src="two.jpg" alt="" style="width:100%;"><span style="font-size: 13px;text-align: left;float: left;">HAND POMADE/POMMADE MAINS</span><br><span style="font-size: 10px;text-align: left;float: left;color:grey;">NOURISHMENT FOR YOUR HANDS</span><br><br><span style="font-size: 13px;text-align: left;float: left;">159.00 KR</span>
+      </div>
+
+      <div class="item">
+        <img src="two.jpg" alt="" style="width:100%;"><span style="font-size: 13px;text-align: left;float: left;">HAND POMADE/POMMADE MAINS</span><br><span style="font-size: 10px;text-align: left;float: left;color:grey;">NOURISHMENT FOR YOUR HANDS</span><br><br><span style="font-size: 13px;text-align: left;float: left;">159.00 KR</span>
+      </div>
+    
+      <div class="item">
+        <img src="two.jpg" alt="" style="width:100%;"><span style="font-size: 13px;text-align: left;float: left;">HAND POMADE/POMMADE MAINS</span><br><span style="font-size: 10px;text-align: left;float: left;color:grey;">NOURISHMENT FOR YOUR HANDS</span><br><br><span style="font-size: 13px;text-align: left;float: left;">159.00 KR</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--
+<div class="wrapper">
+<div class="clear"></div>
+<div class="items">
+<div class="item">
+<br>
+<p>
+PRICE: $333
+</p>
+<button class="add-to-cart" type ="button">
+ADD TO CART
+</button>
+</div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<script src="scripts.js"></script>
+-->
+
+</body>
+</html>
